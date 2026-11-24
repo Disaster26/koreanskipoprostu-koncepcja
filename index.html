@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow" data-podglad>
+<title>Nauka koreańskiego online - Koreański po prostu, po polsku</title>
+<meta name="description" content="Zajęcia z języka koreańskiego online z Jagodą - koreanistką z Uniwersytetu Warszawskiego, z certyfikatem TOPIK 5. Poziomy A1-C2, przygotowanie do TOPIK, test poziomujący.">
+<meta name="theme-color" content="#082640">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/pla-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/lit-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" type="image/webp" imagesrcset="img/korea-720.webp 720w, img/korea-960.webp 960w, img/korea-1280.webp 1280w, img/korea-1600.webp 1600w, img/korea-1920.webp 1920w" imagesizes="(min-width:900px) 50vw, 170vw" fetchpriority="high">
+<style>
+@font-face{font-family:Platypi;font-weight:400 700;font-display:swap;src:url(fonts/pla-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2026,U+20AC}
+@font-face{font-family:Platypi;font-weight:400 700;font-display:swap;src:url(fonts/pla-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:Literata;font-weight:400 700;font-display:swap;src:url(fonts/lit-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2026,U+20AC}
+@font-face{font-family:Literata;font-weight:400 700;font-display:swap;src:url(fonts/lit-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+/* paleta klientki: #d5efd2 #abe288 #247500 #daeef5 #0671b7 #082640 #8a3efd */
+:root{--granat:#082640;--nieb:#0671b7;--ziel:#247500;--lim:#abe288;--mieta:#d5efd2;--blek:#daeef5;--fiolet:#8a3efd;--tx:#1d3347;--mut:#4a5d6e;--line:#d3dde5;--hh:64px;--w:calc(100vw - 32px);--gap:clamp(72px,8vw,136px);--kr:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Noto Sans CJK KR",sans-serif}
+@media (min-width:900px){:root{--hh:84px;--w:min(88vw,1440px)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Literata,Georgia,serif;font-size:clamp(17px,.25vw + 16px,19px);line-height:1.65;color:var(--tx);background:#fff;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Platypi,Georgia,serif;font-weight:600;color:var(--granat);line-height:1.12;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(31px,2.4vw + 14px,56px);max-width:20ch}
+h3{font-size:clamp(22px,.6vw + 18px,28px)}
+p{margin:0 0 1em}
+.wrap{width:var(--w);margin:0 auto}
+.kr{font-family:var(--kr);font-weight:500;letter-spacing:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:54px;padding:0 28px;border-radius:6px;background:var(--nieb);color:#fff;font:600 17px/1 Platypi,Georgia,serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn:hover{background:var(--granat)}
+.btn.lim{background:var(--lim);color:var(--granat)}
+.btn.lim:hover{background:#fff}
+.btn.obrys{background:transparent;border-color:rgba(255,255,255,.75);color:#fff}
+.btn.obrys:hover{background:#fff;color:var(--granat);border-color:#fff}
+.btn .zn{width:16px;height:16px;flex:none}
+.sek{padding:var(--gap) 0}
+.lead{font-size:clamp(18px,.45vw + 16px,22px);color:var(--mut);max-width:60ch}
+/* trzy znaki hangulu: kropka (niebo), pozioma (ziemia), pionowa (człowiek) */
+.trzy{display:block;width:74px;height:22px;margin:22px 0 0}
+
+/* nagłówek */
+.top{position:sticky;top:0;z-index:50;height:var(--hh);background:#fff;border-bottom:1px solid var(--line)}
+.top .wrap{height:100%;display:flex;align-items:center;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.logo svg{width:38px;height:38px;flex:none}
+.logo span{font:600 21px/1.05 Platypi,Georgia,serif;color:var(--granat)}
+.logo small{display:block;font:400 13px/1.3 Literata,serif;color:var(--mut);margin-top:3px}
+.menu{display:none;margin-left:auto;gap:clamp(18px,1.9vw,38px)}
+.menu a{text-decoration:none;font:500 17px/1 Platypi,Georgia,serif;color:var(--granat);padding:10px 0;border-bottom:3px solid transparent}
+.menu a:hover,.menu a.akt{border-color:var(--lim)}
+.top .btn{display:none;min-height:48px;padding:0 22px;font-size:16px}
+.ham{margin-left:auto;width:48px;height:48px;border:1px solid var(--line);border-radius:6px;background:#fff;display:grid;place-items:center;cursor:pointer;color:var(--granat)}
+.ham span,.ham span::before,.ham span::after{display:block;width:20px;height:2px;background:currentColor;position:relative;content:"";transition:transform .2s}
+.ham span::before{position:absolute;top:-6px}.ham span::after{position:absolute;top:6px}
+.ham[aria-expanded=true] span{background:transparent}
+.ham[aria-expanded=true] span::before{transform:translateY(6px) rotate(45deg)}
+.ham[aria-expanded=true] span::after{transform:translateY(-6px) rotate(-45deg)}
+.panel{position:fixed;inset:var(--hh) 0 auto 0;background:#fff;border-bottom:1px solid var(--line);padding:8px 16px 24px;display:none;z-index:49;box-shadow:0 24px 40px rgba(8,38,64,.14)}
+.panel.otw{display:block}
+.panel a{display:block;padding:14px 4px;border-bottom:1px solid var(--line);text-decoration:none;font:500 21px/1.4 Platypi,serif;color:var(--granat)}
+.panel a.btn{margin-top:20px;width:100%;display:flex;color:#fff;border-bottom:0;padding:0 28px;font-size:17px}
+@media (min-width:1100px){.menu{display:flex}.top .btn{display:inline-flex}.ham{display:none}}
+
+/* pierwszy ekran */
+.hero{position:relative;background:var(--granat);color:#fff;overflow:hidden}
+.hero .foto{position:absolute;inset:0}
+.hero .foto img{width:100%;height:100%;object-fit:cover;object-position:58% 100%}
+.hero .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,38,64,.95) 0%,rgba(8,38,64,.86) 40%,rgba(8,38,64,.35) 66%,rgba(8,38,64,0) 82%)}
+.hero .tresc{position:relative;min-height:calc(100svh - var(--hh));display:flex;flex-direction:column;padding:clamp(22px,4.5svh,44px) 16px 28px}
+.hero .czesc{font-size:clamp(22px,3.4svh,28px);color:var(--lim);margin:0 0 10px;line-height:1.2}
+.hero h1{color:#fff;font-size:clamp(30px,4.6svh + 6px,46px);max-width:15ch}
+.hero .lead{color:#e3edf5;font-size:clamp(16.5px,2.3svh,19px);margin:clamp(12px,2svh,20px) 0 0;max-width:34ch;line-height:1.55}
+.hero .przyc{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(24px,3.4svh,34px)}
+.hero .przyc .btn{min-height:52px}
+.hero .kto{margin-top:auto;padding-top:24px;font-size:14.5px;color:#fff;display:flex;align-items:center;gap:10px;text-shadow:0 1px 3px rgba(0,0,0,.45)}
+.hero .kto svg{width:22px;height:22px;flex:none;--v:#fff;--k:#abe288}
+@media (max-width:899px){.hero .kto{display:none}}
+@media (min-width:900px){
+ .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);min-height:clamp(620px,calc(100svh - var(--hh)),980px)}
+ .hero .foto{position:relative;grid-column:2;grid-row:1;min-height:100%}
+ .hero .foto img{position:absolute;inset:0;object-position:50% 72%}
+ .hero .foto::after{display:none}
+ .hero .tresc{grid-column:1;grid-row:1;min-height:0;justify-content:center;padding:64px clamp(32px,5vw,96px) 48px max(calc((100vw - var(--w))/2),32px)}
+ .hero h1{font-size:clamp(44px,3.3vw + 10px,74px);max-width:14ch}
+ .hero .czesc{font-size:clamp(26px,1.4vw + 8px,36px);margin-bottom:16px}
+ .hero .lead{font-size:clamp(19px,.5vw + 14px,23px);max-width:36ch;margin-top:26px}
+ .hero .przyc{margin-top:40px;gap:14px}
+ .hero .kto{margin-top:0;position:absolute;left:max(calc((100vw - var(--w))/2),32px);bottom:32px;text-shadow:none;color:#c9d8e5}
+ .hero .przyc .btn{min-height:58px;padding:0 32px;font-size:18px}
+}
+/* znak hangulu przy granicy zdjęcia */
+.hero .slup{display:none}
+@media (min-width:900px){.hero .slup{display:block;position:absolute;left:calc(51.2% - 7px);top:0;bottom:0;width:14px;background:var(--lim);z-index:2}
+ .hero .slup::before{content:"";position:absolute;width:30px;height:30px;border-radius:50%;background:var(--lim);left:calc(-30px - 18px);top:22%}}
+
+/* poziomy */
+.poziomy{background:var(--blek)}
+.poziomy .glowa{display:grid;gap:20px}
+@media (min-width:1000px){.poziomy .glowa{grid-template-columns:1fr 1fr;align-items:end;gap:60px}}
+.kafle{display:grid;gap:16px;margin-top:clamp(36px,4vw,64px)}
+@media (min-width:700px){.kafle{grid-template-columns:1fr 1fr}}
+@media (min-width:1200px){.kafle{grid-template-columns:repeat(4,1fr);gap:20px}}
+.kafel{position:relative;background:#fff;border-radius:6px;padding:28px 26px 30px;text-decoration:none;display:flex;flex-direction:column;min-height:100%;transition:transform .2s,box-shadow .2s;border-top:6px solid var(--c)}
+.kafel:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(8,38,64,.12)}
+.kafel .poz{font:700 clamp(40px,2.4vw + 18px,56px)/1 Platypi,serif;color:var(--granat);letter-spacing:-.02em}
+.kafel h3{margin:14px 0 10px}
+.kafel p{color:var(--mut);margin:0 0 22px;font-size:16.5px}
+.kafel .dalej{margin-top:auto;display:inline-flex;align-items:center;gap:10px;font:600 16px/1 Platypi,serif;color:var(--nieb)}
+.kafel .dalej svg{width:18px;height:18px;transition:transform .2s}
+.kafel:hover .dalej svg{transform:translateX(4px)}
+.test{margin-top:clamp(28px,3vw,44px);background:var(--granat);color:#fff;border-radius:6px;padding:28px 26px;display:grid;gap:20px;align-items:center}
+.test h3{color:#fff}
+.test p{color:#cfdbe6;margin:8px 0 0;max-width:56ch}
+@media (min-width:900px){.test{grid-template-columns:1fr auto;padding:36px 44px;gap:40px}}
+
+/* hangul - sekcja ciemna */
+.hangul{background:var(--granat);color:#dfe8f0}
+.hangul h2{color:#fff}
+.hangul .g{display:grid;gap:44px}
+@media (min-width:1000px){.hangul .g{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:80px;align-items:center}}
+.hangul .lead{color:#c9d8e5}
+.znaki{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.znak{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:18px 10px 14px;text-align:center}
+.znak svg{width:100%;max-width:120px;height:auto;aspect-ratio:1;margin:0 auto}
+.znak b{display:block;font:600 17px/1.2 Platypi,serif;color:#fff;margin-top:8px}
+.znak small{display:block;font-size:14px;color:#a9bccd}
+.znaki.sam{grid-template-columns:repeat(4,1fr);margin-top:14px}
+.znaki.sam .znak{background:transparent}
+.znaki.sam .znak b{font-family:var(--kr);font-size:26px;line-height:1.1}
+.strzalka{display:flex;align-items:center;gap:12px;color:#a9bccd;font-size:15px;margin:22px 0 4px}
+.strzalka::before,.strzalka::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.2)}
+.hangul .haslo{font:600 clamp(24px,1.4vw + 14px,34px)/1.25 Platypi,serif;color:var(--lim);margin:30px 0 0}
+
+/* o mnie */
+.omnie .g{display:grid;gap:40px}
+@media (min-width:1000px){.omnie .g{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(48px,6vw,110px);align-items:start}}
+.portret{position:relative;margin:0}
+.portret img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:6px}
+.portret::after{content:"";position:absolute;right:-10px;bottom:-10px;width:44%;height:12px;background:var(--lim);border-radius:6px}
+.portret::before{content:"";position:absolute;left:-10px;top:-10px;width:12px;height:38%;background:var(--nieb);border-radius:6px;z-index:1}
+@media (min-width:1000px){.portret{position:sticky;top:calc(var(--hh) + 32px)}}
+.omnie .czesc{font-size:clamp(24px,1vw + 18px,32px);color:var(--ziel);margin:0 0 10px}
+.omnie h2{margin-bottom:24px}
+.listy{display:grid;gap:32px;margin-top:36px}
+@media (min-width:700px){.listy{grid-template-columns:1fr 1fr;gap:40px}}
+.listy h3{font-size:22px;margin-bottom:14px}
+.listy ul{list-style:none;margin:0;padding:0}
+.listy li{position:relative;padding:0 0 12px 22px;font-size:16.5px;color:var(--tx)}
+.listy li::before{content:"";position:absolute;left:2px;top:.35em;width:5px;height:1.05em;border-radius:3px;background:var(--nieb)}
+.listy li:nth-child(even)::before{background:var(--ziel)}
+.cert{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.cert span{background:var(--mieta);color:var(--granat);font:600 15px/1 Platypi,serif;padding:10px 14px;border-radius:4px}
+
+/* pas zdjęć */
+.zdjecia{padding:0 0 var(--gap)}
+.zdjecia .gl{display:flex;justify-content:space-between;align-items:end;gap:20px}
+.strz{display:flex;gap:10px;flex:none}
+.strz button{width:50px;height:50px;border-radius:50%;border:1px solid var(--granat);background:#fff;color:var(--granat);cursor:pointer;display:grid;place-items:center}
+.strz button:disabled{opacity:.3;cursor:default}
+.strz svg{width:20px;height:20px}
+.pas{width:var(--w);margin:32px auto 0;display:grid;grid-auto-flow:column;grid-auto-columns:78%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.pas::-webkit-scrollbar{display:none}
+.pas>*{scroll-snap-align:start;min-width:0}
+@media (min-width:700px){.pas img{aspect-ratio:4/3}.pas{grid-auto-columns:calc((100% - 20px)/2);gap:20px}.zdjecia .strz{display:none}}
+.pas button{padding:0;border:0;background:none;cursor:zoom-in;text-align:left;color:inherit;font:inherit}
+.pas img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;background:var(--blek)}
+.pas figcaption{font-size:15px;color:var(--mut);margin-top:10px}
+
+/* materiały */
+.material{background:var(--mieta)}
+.material .g{display:grid;gap:40px}
+@media (min-width:1000px){.material .g{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px}}
+.linki{list-style:none;margin:0;padding:0;border-top:1px solid rgba(8,38,64,.18)}
+.linki a{display:grid;grid-template-columns:1fr auto;gap:6px 20px;align-items:center;padding:22px 4px;border-bottom:1px solid rgba(8,38,64,.18);text-decoration:none;transition:background .2s,padding .2s}
+.linki a:hover{background:rgba(255,255,255,.55);padding-left:14px}
+.linki b{font:600 clamp(21px,.5vw + 18px,26px)/1.2 Platypi,serif;color:var(--granat)}
+.linki span{grid-column:1;font-size:16px;color:var(--mut)}
+.linki svg{grid-column:2;grid-row:1/3;width:22px;height:22px;color:var(--ziel)}
+.social{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.social a{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border-radius:6px;background:var(--granat);color:#fff;text-decoration:none;font:600 16px/1 Platypi,serif}
+.social a:hover{background:var(--ziel)}
+.social small{display:block;margin-top:14px;font-size:15px;color:var(--mut);width:100%}
+
+/* kontakt */
+.kontakt{background:var(--blek)}
+.kontakt .g{display:grid;gap:40px}
+@media (min-width:1000px){.kontakt .g{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:80px}}
+.mail{display:inline-flex;align-items:center;gap:12px;font:600 clamp(20px,.8vw + 16px,28px)/1.2 Platypi,serif;color:var(--nieb);text-decoration:none;margin-top:8px;word-break:break-all}
+.mail svg{width:24px;height:24px;flex:none}
+.mail:hover{color:var(--granat)}
+form{background:#fff;border-radius:6px;padding:clamp(24px,3vw,44px);display:grid;gap:18px}
+label{display:grid;gap:6px;font:600 15.5px/1.2 Platypi,serif;color:var(--granat)}
+input,select,textarea{font:inherit;font-size:17px;color:var(--tx);border:1px solid #b9c7d3;border-radius:6px;padding:13px 14px;background:#fff;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--nieb);outline-offset:1px;border-color:var(--nieb)}
+textarea{min-height:130px;resize:vertical}
+.dwa{display:grid;gap:18px}
+@media (min-width:640px){.dwa{grid-template-columns:1fr 1fr}}
+.zgoda{display:flex;gap:10px;align-items:flex-start;font:400 14.5px/1.45 Literata,serif;color:var(--mut)}
+.zgoda input{width:20px;height:20px;flex:none;margin-top:2px;accent-color:var(--nieb)}
+.komunikat{font-size:15.5px;color:var(--ziel);margin:0;min-height:1em}
+form .btn{justify-self:start}
+
+/* stopka */
+.stopka{background:var(--granat);color:#c9d8e5;padding:clamp(52px,5vw,84px) 0 28px;font-size:16px}
+.stopka .g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 24px}
+.stopka .logo{grid-column:1/-1}
+.stopka .logo svg{--v:#fff;--k:#abe288}.stopka .logo span{color:#fff}.stopka .logo small{color:#a9bccd}
+.stopka b{display:block;color:#fff;font:600 17px/1.3 Platypi,serif;margin-bottom:10px}
+.stopka ul{list-style:none;margin:0;padding:0}
+.stopka li{margin-bottom:8px}
+.stopka a{text-decoration:none}
+.stopka a:hover{color:var(--lim)}
+.stopka .dol{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);font-size:14.5px}
+@media (min-width:1000px){.stopka .g{grid-template-columns:1.4fr 1fr 1fr 1fr}.stopka .logo{grid-column:auto}}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+/* powiększenie zdjęć */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(5,22,38,.94);display:none;align-items:center;justify-content:center;padding:56px 12px}
+.lb.otw{display:flex}
+.lb img{max-width:100%;max-height:calc(100svh - 130px);width:auto;height:auto;border-radius:4px}
+.lb button{position:absolute;background:rgba(255,255,255,.12);border:0;color:#fff;width:52px;height:52px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.lb button:hover{background:rgba(255,255,255,.25)}
+.lb svg{width:22px;height:22px}
+.lb .zam{top:12px;right:12px}.lb .pop{left:12px;top:50%;transform:translateY(-50%)}.lb .nas{right:12px;top:50%;transform:translateY(-50%)}
+.lb .licz{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#c9d8e5;font-size:15px}
+@media (max-width:699px){.lb .pop,.lb .nas{top:auto;bottom:8px;transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="znak" viewBox="0 0 40 40"><circle cx="10" cy="10" r="5.5" style="fill:var(--k,#247500)"/><rect x="3" y="22" width="22" height="7" rx="3.5" fill="#0671b7"/><rect x="29" y="3" width="7" height="34" rx="3.5" style="fill:var(--v,#082640)"/></symbol>
+ <symbol id="prawo" viewBox="0 0 24 24"><path d="M4 12h15M13 5.5l6.5 6.5-6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="lewo" viewBox="0 0 24 24"><path d="M20 12H5M11 5.5 4.5 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="koperta" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3.5 7 8.5 6.5L20.5 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+ <symbol id="iks" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+ <symbol id="trzy" viewBox="0 0 74 22"><circle cx="7" cy="11" r="6" fill="#247500"/><rect x="20" y="7.5" width="30" height="7" rx="3.5" fill="#0671b7"/><rect x="60" y="0" width="7" height="22" rx="3.5" fill="#082640"/></symbol>
+</svg>
+
+<header class="top">
+ <div class="wrap">
+  <a class="logo" href="#" aria-label="Koreański po prostu - strona główna"><svg><use href="#znak"/></svg><span>koreański po prostu<small>po polsku</small></span></a>
+  <nav class="menu" aria-label="Menu główne">
+   <a href="#poziomy">Poziomy i TOPIK</a>
+   <a href="#hangul">Jak uczę</a>
+   <a href="#o-mnie">O mnie</a>
+   <a href="#materialy">Materiały</a>
+   <a href="#kontakt">Kontakt</a>
+  </nav>
+  <a class="btn" href="#kontakt">Zarezerwuj zajęcia</a>
+  <button class="ham" aria-label="Otwórz menu" aria-expanded="false" aria-controls="panel"><span></span></button>
+ </div>
+</header>
+<nav class="panel" id="panel" aria-label="Menu mobilne">
+ <a href="#poziomy">Poziomy i TOPIK</a>
+ <a href="#hangul">Jak uczę</a>
+ <a href="#o-mnie">O mnie</a>
+ <a href="#materialy">Materiały</a>
+ <a href="#kontakt">Kontakt</a>
+ <a class="btn" href="#kontakt">Zarezerwuj zajęcia</a>
+</nav>
+
+<main>
+<section class="hero">
+ <div class="foto">
+  <img src="img/korea-1280.webp" srcset="img/korea-720.webp 720w, img/korea-960.webp 960w, img/korea-1280.webp 1280w, img/korea-1600.webp 1600w, img/korea-1920.webp 1920w" sizes="(min-width:900px) 50vw, 170vw" width="1920" height="2560" alt="Koreańskie serduszko z palców na tle stawu i tradycyjnego pawilonu" fetchpriority="high">
+ </div>
+ <span class="slup" aria-hidden="true"></span>
+ <div class="tresc">
+  <p class="czesc kr" lang="ko">안녕하세요?</p>
+  <h1>Nauka koreańskiego online - po prostu, po polsku</h1>
+  <p class="lead">Nie komplikujmy tego, co można powiedzieć po prostu… po koreańsku. Uczę od podstaw hangulu po egzamin TOPIK.</p>
+  <div class="przyc">
+   <a class="btn lim" href="#kontakt">Zarezerwuj zajęcia</a>
+   <a class="btn obrys" href="#test">Sprawdź swój poziom</a>
+  </div>
+  <p class="kto"><svg><use href="#znak"/></svg>Jagoda - koreanistka (Uniwersytet Warszawski), certyfikat TOPIK 5</p>
+ </div>
+</section>
+
+<section class="sek poziomy" id="poziomy">
+ <div class="wrap">
+  <div class="glowa">
+   <div>
+    <h2>Od pierwszej litery do swobodnej rozmowy</h2>
+    <svg class="trzy" aria-hidden="true"><use href="#trzy"/></svg>
+   </div>
+   <p class="lead">Zaczynasz od zera albo wracasz po przerwie? Wybierz poziom, na którym jesteś. Każdy ma swoje materiały i zajęcia dopasowane do celu: podróż, praca, studia, serial bez napisów.</p>
+  </div>
+  <div class="kafle">
+   <a class="kafel" href="#kontakt" style="--c:var(--lim)"><span class="poz">A1-A2</span><h3>Pierwsze kroki</h3><p>Hangul, wymowa i pierwsze zdania. Przedstawisz się, zamówisz jedzenie i zapytasz o drogę.</p><span class="dalej">Zacznij od podstaw <svg><use href="#prawo"/></svg></span></a>
+   <a class="kafel" href="#kontakt" style="--c:var(--nieb)"><span class="poz">B1-B2</span><h3>Rozmowa na co dzień</h3><p>Gramatyka, która wreszcie się układa, rozmowy o codzienności i coraz więcej rozumienia ze słuchu.</p><span class="dalej">Mów swobodniej <svg><use href="#prawo"/></svg></span></a>
+   <a class="kafel" href="#kontakt" style="--c:var(--ziel)"><span class="poz">C1-C2</span><h3>Poziom zaawansowany</h3><p>Język formalny i akademicki, poziomy grzeczności, teksty prasowe i literackie.</p><span class="dalej">Szlifuj język <svg><use href="#prawo"/></svg></span></a>
+   <a class="kafel" href="#kontakt" style="--c:var(--fiolet)"><span class="poz">TOPIK</span><h3>Egzamin certyfikujący</h3><p>Jak wygląda TOPIK I i II, jak rozplanować naukę i na co uważać w części pisemnej.</p><span class="dalej">Przygotuj się do egzaminu <svg><use href="#prawo"/></svg></span></a>
+  </div>
+  <div class="test" id="test">
+   <div>
+    <h3>Nie wiesz, który poziom wybrać?</h3>
+    <p>Zrób krótki test poziomujący. Po wyniku od razu wiesz, od czego zacząć zajęcia.</p>
+   </div>
+   <a class="btn lim" href="#kontakt">Zrób test poziomujący</a>
+  </div>
+ </div>
+</section>
+
+<section class="sek hangul" id="hangul">
+ <div class="wrap g">
+  <div>
+   <h2>Cały alfabet zaczyna się od trzech kresek</h2>
+   <p class="lead" style="margin-top:24px">Samogłoski hangulu zbudowano z trzech prostych znaków: kropki, która oznacza niebo, poziomej kreski - ziemię i pionowej - człowieka. Łącząc je, dostajesz kolejne litery.</p>
+   <p>Tak samo prowadzę zajęcia: od małych, zrozumiałych elementów do całych zdań. Bez komplikowania i bez wkuwania tabel na pamięć, za to z wyjaśnieniem po polsku, dlaczego coś działa tak, a nie inaczej.</p>
+   <p class="haslo">Daj sobie zrozumieć.</p>
+  </div>
+  <div>
+   <div class="znaki">
+    <div class="znak"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="13" fill="#abe288"/></svg><b>kropka</b><small>niebo</small></div>
+    <div class="znak"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="14" y="44" width="72" height="12" rx="6" fill="#0671b7"/></svg><b>pozioma</b><small>ziemia</small></div>
+    <div class="znak"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="44" y="14" width="12" height="72" rx="6" fill="#fff"/></svg><b>pionowa</b><small>człowiek</small></div>
+   </div>
+   <p class="strzalka">razem tworzą</p>
+   <div class="znaki sam">
+    <div class="znak"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="36" y="14" width="12" height="72" rx="6" fill="#fff"/><circle cx="68" cy="50" r="9" fill="#abe288"/></svg><b lang="ko">ㅏ</b><small>a</small></div>
+    <div class="znak"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="32" cy="50" r="9" fill="#abe288"/><rect x="52" y="14" width="12" height="72" rx="6" fill="#fff"/></svg><b lang="ko">ㅓ</b><small>eo</small></div>
+    <div class="znak"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="34" r="9" fill="#abe288"/><rect x="14" y="56" width="72" height="12" rx="6" fill="#0671b7"/></svg><b lang="ko">ㅗ</b><small>o</small></div>
+    <div class="znak"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="14" y="34" width="72" height="12" rx="6" fill="#0671b7"/><circle cx="50" cy="68" r="9" fill="#abe288"/></svg><b lang="ko">ㅜ</b><small>u</small></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sek omnie" id="o-mnie">
+ <div class="wrap g">
+  <figure class="portret"><img src="img/jagoda-960.webp" srcset="img/jagoda-480.webp 480w, img/jagoda-720.webp 720w, img/jagoda-960.webp 960w, img/jagoda-1280.webp 1280w" sizes="(min-width:1000px) 36vw, calc(100vw - 32px)" width="1707" height="2560" loading="lazy" alt="Jagoda, lektorka języka koreańskiego, pokazuje serce z dłoni"></figure>
+  <div>
+   <p class="czesc kr" lang="ko">안녕하세요? Cześć!</p>
+   <h2>Jestem Jagoda i od 5 lat uczę koreańskiego</h2>
+   <p class="lead">Uczę prywatnie, w szkole językowej Kierunek Wschód i na Uniwersytecie SWPS. Przede wszystkim jestem pasjonatką języka i kultury koreańskiej - największą radość daje mi uczenie i poznawanie nowych kultur.</p>
+   <p>Różnice kulturowe i problemy społeczne to coś, co nie pozwala mi oderwać się od komputera, dopóki nie zrozumiem, skąd się biorą i jak możemy się lepiej rozumieć. Tego samego szukam na zajęciach: żeby język nie był zbiorem reguł, tylko sposobem na porozumienie.</p>
+   <div class="cert"><span>TOPIK poziom 5</span><span>Hanyang, poziom 6</span><span>Koreanistyka UW</span></div>
+   <div class="listy">
+    <div>
+     <h3>Doświadczenie</h3>
+     <ul>
+      <li>Szkoła językowa Kierunek Wschód - od 2022 roku</li>
+      <li>Język koreański na Uniwersytecie SWPS</li>
+      <li>Kultura, język i językoznawstwo dla II i III roku koreanistyki, Wyższa Uczelnia w Wołominie</li>
+      <li>Zajęcia prywatne - od 2023 roku</li>
+     </ul>
+    </div>
+    <div>
+     <h3>Wykształcenie</h3>
+     <ul>
+      <li>Uniwersytet Warszawski, Orientalistyka - Koreanistyka, studia licencjackie</li>
+      <li>Uniwersytet Warszawski, Orientalistyka - Koreanistyka, studia magisterskie</li>
+      <li>Uniwersytet Hanyang w Seulu - ukończony najwyższy poziom kursu (6, zaawansowany wyższy)</li>
+      <li>Certyfikat TOPIK, poziom 5</li>
+     </ul>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="zdjecia" aria-labelledby="zd">
+ <div class="wrap gl">
+  <h2 id="zd" style="font-size:clamp(26px,1.4vw + 16px,40px)">Korea z bliska</h2>
+  <div class="strz" data-pas="pas"><button aria-label="Poprzednie zdjęcie" disabled><svg><use href="#lewo"/></svg></button><button aria-label="Następne zdjęcie"><svg><use href="#prawo"/></svg></button></div>
+ </div>
+ <div class="pas" id="pas" data-galeria>
+  <figure style="margin:0"><button data-src="img/hanyang-960.webp" data-opis="Uniwersytet Hanyang w Seulu"><img src="img/hanyang-720.webp" srcset="img/hanyang-480.webp 480w, img/hanyang-720.webp 720w, img/hanyang-960.webp 960w" sizes="(min-width:700px) 44vw, 78vw" width="1182" height="1306" loading="lazy" alt="Jagoda na mównicy Uniwersytetu Hanyang w Seulu"></button><figcaption>Uniwersytet Hanyang w Seulu</figcaption></figure>
+  <figure style="margin:0"><button data-src="img/ogrod-1600.webp" data-opis="Ogród przy tradycyjnym domu hanok"><img src="img/ogrod-720.webp" srcset="img/ogrod-480.webp 480w, img/ogrod-720.webp 720w, img/ogrod-960.webp 960w" sizes="(min-width:700px) 44vw, 78vw" width="1920" height="2560" loading="lazy" alt="Staw z lampionami przy tradycyjnym koreańskim domu"></button><figcaption>Ogród przy tradycyjnym domu hanok</figcaption></figure>
+ </div>
+</section>
+
+<section class="sek material" id="materialy">
+ <div class="wrap g">
+  <div>
+   <h2>Materiały do nauki</h2>
+   <svg class="trzy" aria-hidden="true"><use href="#trzy"/></svg>
+   <p class="lead" style="margin-top:24px">Wskazówki, jak się uczyć, transkrypcja i sprawdzone materiały. Krótkie lekcje i ciekawostki wrzucam też na YouTube, Instagram i TikTok.</p>
+   <div class="social">
+    <a href="https://www.youtube.com/@KoreańskiPoProstu" rel="noopener">YouTube</a>
+    <a href="https://www.instagram.com/koreanski_po_prostu/" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@koreanski_po_prostu" rel="noopener">TikTok</a>
+    <small>@koreanski_po_prostu</small>
+   </div>
+  </div>
+  <ul class="linki">
+   <li><a href="#materialy"><b>Jak się uczyć?</b><span>Od czego zacząć, jak powtarzać i jak nie zgubić motywacji po pierwszym miesiącu.</span><svg><use href="#prawo"/></svg></a></li>
+   <li><a href="#materialy"><b>Transkrypcja</b><span>Jak czytać i zapisywać koreańskie słowa polskimi literami.</span><svg><use href="#prawo"/></svg></a></li>
+   <li><a href="#materialy"><b>Polecane materiały</b><span>Podręczniki, aplikacje i kanały, z których warto korzystać.</span><svg><use href="#prawo"/></svg></a></li>
+   <li><a href="#materialy"><b>Najczęściej zadawane pytania</b><span>Ile trwa nauka, jak wyglądają zajęcia online, jak się zapisać.</span><svg><use href="#prawo"/></svg></a></li>
+   <li><a href="#materialy"><b>Aktualności</b><span>Nowe terminy, materiały i ogłoszenia.</span><svg><use href="#prawo"/></svg></a></li>
+  </ul>
+ </div>
+</section>
+
+<section class="sek kontakt" id="kontakt">
+ <div class="wrap g">
+  <div>
+   <h2>Nie wiesz, od czego zacząć? Napisz do mnie</h2>
+   <svg class="trzy" aria-hidden="true"><use href="#trzy"/></svg>
+   <p class="lead" style="margin-top:24px">Napisz, na jakim jesteś poziomie i czego potrzebujesz. Odpowiem z propozycją terminu zajęć online.</p>
+   <a class="mail" href="mailto:info@koreanskipoprostu.pl"><svg><use href="#koperta"/></svg>info@koreanskipoprostu.pl</a>
+  </div>
+  <form id="formularz" novalidate>
+   <div class="dwa">
+    <label>Imię<input name="imie" autocomplete="given-name" required></label>
+    <label>E-mail<input name="email" type="email" autocomplete="email" required></label>
+   </div>
+   <label>Twój poziom
+    <select name="poziom">
+     <option>Zaczynam od zera</option>
+     <option>A1-A2</option>
+     <option>B1-B2</option>
+     <option>C1-C2</option>
+     <option>Przygotowanie do TOPIK</option>
+     <option>Nie wiem - chcę zrobić test</option>
+    </select>
+   </label>
+   <label>Wiadomość<textarea name="wiadomosc" placeholder="Np. chcę zacząć od podstaw, najlepiej wieczorami"></textarea></label>
+   <label class="zgoda"><input type="checkbox" required> Zgadzam się na kontakt w sprawie mojego zapytania.</label>
+   <button class="btn" type="submit">Wyślij wiadomość</button>
+   <p class="komunikat" aria-live="polite"></p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="stopka">
+ <div class="wrap">
+  <div class="g">
+   <a class="logo" href="#"><svg><use href="#znak"/></svg><span>koreański po prostu<small>po polsku</small></span></a>
+   <div><b>Nauka</b><ul><li><a href="#poziomy">Poziomy A1-C2</a></li><li><a href="#poziomy">TOPIK</a></li><li><a href="#test">Test poziomujący</a></li><li><a href="#kontakt">Zarezerwuj zajęcia</a></li></ul></div>
+   <div><b>Materiały</b><ul><li><a href="#materialy">Jak się uczyć?</a></li><li><a href="#materialy">Transkrypcja</a></li><li><a href="#materialy">Polecane materiały</a></li><li><a href="#materialy">FAQ</a></li></ul></div>
+   <div><b>Kontakt</b><ul><li><a href="mailto:info@koreanskipoprostu.pl">info@koreanskipoprostu.pl</a></li><li><a href="https://www.youtube.com/@KoreańskiPoProstu" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/koreanski_po_prostu/" rel="noopener">Instagram</a></li><li><a href="https://www.tiktok.com/@koreanski_po_prostu" rel="noopener">TikTok</a></li></ul></div>
+  </div>
+  <div class="dol"><span>© 2026 koreanskipoprostu.pl</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=koreanskipoprostu.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+ </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+ <img alt="">
+ <button class="zam" aria-label="Zamknij"><svg><use href="#iks"/></svg></button>
+ <button class="pop" aria-label="Poprzednie"><svg><use href="#lewo"/></svg></button>
+ <button class="nas" aria-label="Następne"><svg><use href="#prawo"/></svg></button>
+ <p class="licz"></p>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>
